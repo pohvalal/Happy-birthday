@@ -1,0 +1,96 @@
+{
+  margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: url("dfg.jpg");
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container{
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+.bubbles {
+  position: relative;
+display: flex;
+}
+.bubbles span
+{
+position: relative;
+width: 13px;
+height: 15px;
+background: #3f48ff;
+  margin: 0 4px;
+  border-radius: 50%;
+
+box-shadow: 
+0 0 0 10px #4fc3dc44,
+0 0 50px #b37aae
+0 0 100px #b37aae;
+
+animation: animate 15s linear infinite;
+animation-duration: calc(125s / var(--i));
+
+}
+.bubbles span:nth-child(even)
+{
+background:
+#b37aae;
+
+box-shadow: 
+  0 0 0 10px #ff2d7544,
+ 0 0 50px #b37aae,
+0 0 100px #b37aae;
+}
+ @keyframes animate
+{
+  0%
+  {
+    
+transform: translateY(100vh) scale(0);
+  }
+
+100%
+  {
+transform: translateY(-10vh) scale(1);
+}
+}
+
+
+
+  
+
+.glow {
+    font-size: 3em;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00e0, 0 0 30px #ff00e0, 0 0 40px #ff00e0, 0 0 50px #ff00e0, 0 0 60px #ff00e0, 0 0 70px #ff00e0;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.photos img {
+    width: 240px;
+    margin: 0 10px;
+}
+
+.moving-text {
+    font-size: 2em;
+    animation: moveText 5s ease infinite;
+}
+
+@keyframes moveText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
